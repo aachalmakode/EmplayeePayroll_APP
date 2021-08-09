@@ -172,6 +172,20 @@ select{
     text-decoration: none;
     text-align: center;
 } 
+.button:hover {
+    background-color: #969696;
+}
+.submitButton:hover {
+    background-color: #82a70c;
+    cursor: pointer;
+}
+error-output {
+    font-size: 18px;
+    font-style: italic;
+    color: red;
+}
+
+
 
 /*--Media Queries--*/
 @media only screen and (max-width: 960px) {
@@ -182,7 +196,11 @@ select{
         width: 85%;
         padding: 44px 20px;
     }
+    error-output {
+        font-size: 12px;
+    }
 }
+
 
 @media only screen and (max-width:600px){
     .form {
@@ -214,4 +232,8 @@ select{
         flex-direction: column-reverse;
         align-items: flex-start;
     }
+}    
+
+error-output {
+    font-size: 9px;
 }
