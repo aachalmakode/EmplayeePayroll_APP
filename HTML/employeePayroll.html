@@ -2,103 +2,166 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <title>Document</title>
         <link rel="stylesheet" href="C:\JavaScript\EmpPayroll_APP\CSS\style.css">
-        <title>Employee payroll form</title>
+        <link
+            rel="stylesheet"
+            href="C:\JavaScript\EmpPayroll_APP\CSS\style.css">
     </head>
     <body>
-        <!----UC 1----->
         <header class="header-content header">
             <div class="logo-content">
-                <img src="C:\JavaScript\EmpPayroll_APP\Assets\images\logo.png" alt="">
+                <img src="C:\JavaScript\EmpPayroll_APP\Assets\images\logo.png" alt="logo">
                 <div>
                     <span class="emp-text">EMPLOYEE</span><br>
                     <span class="emp-text emp-payroll">PAYROLL</span>
                 </div>
             </div>
         </header>
-    </body>
-<!---UC-2--->
-<div class="form-head">Employee Payroll Form </div>
-<div class="row-content">
-    <label class="label text" for="name">Name</label>
-    <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
-    <error-output class="name-error" for="name"></error-output>
-</div>
- <!---UC-3--->
- <div class="row-content">
-    <label class="label text" for="profile">Profile image</label>
-    <div class="profile-radio-content">
-        <label>
-            <input type="radio" id="profile1" value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -1.png" required>
-            <img class="profile" id='image1' src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -1.png">
-        </label>
-        <label>
-            <input type="radio" id="profile2" value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -3.png" required>
-            <img class="profile" id='image2' src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -3.png">
-        <label>
-            <input type="radio" id="profile3" value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -9.png" required>
-            <img class="profile" id='image3' src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -9.png">
-        <label>
-            <input type="radio" id="profile4" value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -7.png" required>                            
-            <img class="profile" id='image4' src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -7.png">
-        </label>
-            </div>
-          </div>
+
+        <div class="form-content">
+            <form class="form" action="#" onsubmit="save(); return false">
+                <div class="form-head">Employee Payroll Form
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="name">Name</label>
+                    <input
+                        class="input"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name.."
+                        required="required">
+                </div> <error-output class="name-error" for="name"></error-output>
+
+                <div class="row-content">
+                    <label class="label text" for="profile">Profile image</label>
+                    <div class="profile-radio-content">
+                        <label>
+                            <input
+                                type="radio"
+                                id="profile1"
+                                name="profile"
+                                value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -1.png"
+                                required="required">
+                            <img
+                                class="profile"
+                                id='image1'
+                                src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -1.png">
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                id="profile2"
+                                name="profile"
+                                value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -5.png"
+                                required="required">
+                            <img
+                                class="profile"
+                                id='image2'
+                                src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -5.png">
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                id="profile3"
+                                name="profile"
+                                value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -9.png"
+                                required="required">
+                            <img
+                                class="profile"
+                                id='image3'
+                                src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse -9.png">
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                id="profile4"
+                                name="profile"
+                                value="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse_10.png"
+                                required="required">
+                            <img
+                                class="profile"
+                                id='image4'
+                                src="C:\JavaScript\EmpPayroll_APP\Assets\profile-images\Ellipse_10.png">
+                        </label>
+                    </div>
+                    </div>
+
+                    <div class="row-content">
+                        <label class="label text" for="gender">Gender</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label class="text" for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label class="text" for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="row-content">
+                        <label class="label text" for="department">Department</label>
+                        <div>
+                            <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                            <label class="text" for="hr">HR</label>
+                            <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                            <label class="text" for="sales">Sales</label>
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="finance"
+                                name="finance"
+                                value="Finance">
+                            <label class="text" for="finance">Finance</label>
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="engineer"
+                                name="engineer"
+                                value="Engineer">
+                            <label class="text" for="engineer">Engineer</label>
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="others"
+                                name="others"
+                                value="Others">
+                            <label class="text" for="others">Others</label>
+                        </div>
+                    </div>
+                    <div class="row-content">
+                        <label class="label text" for="salary">Choose your salary:
+                        </label>
+                        <input
+                            class="input"
+                            type="range"
+                            name="salary"
+                            id="salary"
+                            min="300000"
+                            max="500000"
+                            step="100"
+                            value="400000">
+                        <output class="salary-output" for="salary">400000</output>
+                    </div>
+
+                    <script>
+                        const salary = document.querySelector('#salary');
+                        const salaryOutput = document.querySelector('.salary-output');
+                        salaryOutput.textContent = salary.value;
+                        salary.oninput = function() {
+                            salaryOutput.textContent = salary.value;
+                        };
         
-           <!---UC-4--->
-           <div class="row-content">
-            <label class="label text" for="gender">Gender</label>
-            <div>
-                <input type="radio" id="male" name="gender" value="male">
-                <label class="text" for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label class="text" for="female">Female</label>
-            </div>
-        </div>
-        <div class="row-content">
-            <label class="label text" for="department">Department</label>
-            <div>
-                <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
-                <label class="text" for="hr">HR</label>
-                <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
-                <label class="text" for="sales">Sales</label>
-                <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
-                <label class="text" for="finance">Finance</label>
-                <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
-                <label class="text" for="engineer">Engineer</label>
-                <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
-                <label class="text" for="others">Others</label>
-            </div>
-        </div>
-        <div class="row-content">
-            <label class="label text" for="salary">Choose your salary: </label>
-            <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-            <output class="salary-output" for="salary">400000</output>
-        </div>
-
-        
-        <script>
-            const salary = document.querySelector('#salary');
-            const salaryOutput = document.querySelector('.salary-output');
-            salaryOutput.textContent = salary.value;
-            salary.oninput = function() {
-                salaryOutput.textContent = salary.value;
-            };
-
-            const name = document.querySelector('#name');
-            const nameError = document.querySelector('.name-error');
-            name.addEventListener('input', function() {
-                let nameRegex = RegExp('^[A-Z][a-z]{2,}$');
-                if(nameRegex.test(name.value))
-                    nameError.textContent = "";
-                else
-                    nameError.textContent = "Name is incorrect";
-            });
-        </script>
-    
-
+                        const name = document.querySelector('#name');
+                        const nameError = document.querySelector('.name-error');
+                        name.addEventListener('input', function() {
+                            let nameRegex = RegExp('^[A-Z][a-z]{2,}$');
+                            if(nameRegex.test(name.value))
+                                nameError.textContent = "";
+                            else
+                                nameError.textContent = "Name is incorrect";
+                        });
+                    </script>
 
  <!--UC5-->
  <div class="row-content">
